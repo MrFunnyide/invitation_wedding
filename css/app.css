@@ -95,6 +95,14 @@ body {
     position: absolute;
 }
 
+.bunga_content7 {
+    position: absolute;
+}
+
+.audio-player {
+    position: absolute;
+}
+
 @media screen and (max-width: 768px) {
     .bunga1 {
         width: 60%;
@@ -159,4 +167,37 @@ body {
         right: 78px;
     }
 
+    .audio-player {
+        position: fixed;
+        width: 100px;
+        z-index: 1;
+        bottom: 100px;
+        right: -20px;
+
+    }
+
+    .bunga_content7 {
+        width: 60%;
+        position: absolute;
+        left: -70px;
+        bottom: 200px;
+        transform: rotate(-40deg);
+    }
+
+    .music-animate {
+        animation-name: rotateMusic;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes rotateMusic {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
 }

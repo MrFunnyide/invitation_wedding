@@ -1,49 +1,20 @@
-// aos
-// target 
-const targetDate = new Date('2024-02-18').getTime();
+const audio = document.querySelector("audio");
+let musicButton = document.getElementById("musicButton").lastChild;
 
-// fungsi untuk update countdown setiap detik
-function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    // hitung waktu yang tersisa
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // tampilkan ke dalam element dengan id 
-    document.getElementById('tampilan-waktu').innerHTML = `
-                        <div class="col-3 p-1">
-                              <h2 class="d-inline m-0 p-0" id="hari">${days}</h2><small
-                                    class="ms-1 me-0 my-0 p-0 d-inline">Hari</small>
-                        </div>
-                        <div class="col-3 p-1">
-                              <h2 class="d-inline m-0 p-0" id="jam">${hours}</h2><small
-                                    class="ms-1 me-0 my-0 p-0 d-inline">Jam</small>
-                        </div>
-                        <div class="col-3 p-1">
-                              <h2 class="d-inline m-0 p-0" id="menit">${minutes}</h2><small
-                                    class="ms-1 me-0 my-0 p-0 d-inline">Menit</small>
-                        </div>
-                        <div class="col-3 p-1">
-                              <h2 class="d-inline m-0 p-0" id="detik">${seconds}</h2><small
-                                    class="ms-1 me-0 my-0 p-0 d-inline">Detik</small>
-                        </div>    
-    `
-    // jika waktu countdown berakhir 
-    if (distance < 0) {
-        clearInterval(countdownInterval);
-        document.getElementById('tampilan-waktu').innerHTML = "Sudah Saat nya Tiba";
+function playMusic() {
+    if (audio.paused) {
+        audio.play();
+        musicButton.classList.remove('ri-play-circle-fill');
+        musicButton.classList.add('ri-pause-circle-fill');
+        document.getElementById('musicButton').style.animationIterationCount = 'infinite'
+    } else {
+        audio.pause();
+        musicButton.classList.remove('ri-pause-circle-fill');
+        musicButton.classList.add('ri-play-circle-fill');
+        document.getElementById('musicButton').style.animationIterationCount = '0'
     }
-};
+}
 
-// pertama kali manggil fungsi untuk mulai countdown 
-updateCountdown();
-
-// update countdown setiap 1 detik
-const countdownInterval = setInterval(updateCountdown, 1000);
 
 // salin 
 function salin(btn, msg = 'Tersalin', timeout = 1500) {
@@ -71,6 +42,7 @@ function showContent() {
 
 // open 
 function bukaUndangan() {
+    audio.play();
     let element = document.getElementById('welcome_page');
     showContent();
     element.style.transition = "height 0.5s ease";
@@ -90,4 +62,22 @@ function openGift() {
     }
 }
 
+function submitForm() {
+    let form = document.getElementById("invitationForm");
+    let formData = new FormData(form);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", form.action, true);
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            // Tanggapan dari server
+            alert("Pesan berhasil disimpan.");
+            // Dapat juga menambahkan logika untuk menampilkan pesan tanpa perlu mereload halaman.
+            // Sebagai contoh, bisa memanipulasi DOM untuk menambahkan pesan ke area pesan tanpa perlu reload.
+        }
+    };
+
+    xhr.send(formData);
+}
 
