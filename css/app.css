@@ -73,30 +73,44 @@ body {
 
 .bunga_content1 {
     position: absolute;
+    width: 10%;
+    right: 10%;
+    top: 10%;
 }
 
 .bunga_content2 {
     position: absolute;
+    width: 10%;
 }
 
 .bunga_content3 {
     position: absolute;
+    width: 10%;
+
 }
 
 .bunga_content4 {
     position: absolute;
+    width: 10%;
+
 }
 
 .bunga_content5 {
     position: absolute;
+    width: 10%;
+
 }
 
 .bunga_content6 {
     position: absolute;
+    width: 10%;
+
 }
 
 .bunga_content7 {
     position: absolute;
+    width: 10%;
+
 }
 
 .audio-player {
