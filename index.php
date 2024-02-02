@@ -23,7 +23,7 @@
       <script src="./js/script.js" defer></script>
 
       <!-- Tambahkan stylesheet AOS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,7 @@
       <!-- welcome page -->
       <div id="welcome_page" class="position-relative d-flex justify-content-center" style="background-image: linear-gradient(#333452, #363864);">
             <div class="text-center d-flex flex-column justify-content-around" id="home" style="height: 100vh !important;">
-                  <div class="pt-4 content" style="color: #DDB76C;">
+                  <div class="pt-4 content" style="color: #DDB76C;" data-aos="fade-right" data-aos-duration="3000">
                         <p class="font-standard" style="font-size: 1rem;">You're Invited To The Wedding Of</p>
                         <h1 class="font-standard fw-bold my-4" style="font-size: 2.5rem;">Maytizen Saputra <br>&<br>
                               Mayunita
@@ -42,19 +42,18 @@
                         </a>
                         <p class="font-standard mt-2" style="font-size: 1rem">18 February 2024</p>
                   </div>
-                  <div class="content" style="font-size: 1rem; color: #DDB76C;">
+                  <div class="content" style="font-size: 1rem; color: #DDB76C;" data-aos="fade-left" data-aos-duration="3000">
                         <p class="font-standard" style="margin-bottom: -1px;">Kepada Yth. Bapak/Ibu/Saudara/i</p>
                         <p class="font-standard fw-bold">ditempat</p>
                         <button onclick="bukaUndangan()" style="background-color: #DDB76C; font-size: 1rem; color: #3E405D;" class="btn font-standard">Open
                               Invitation</button>
                   </div>
             </div>
-            <img class="bunga1" src="./assets/image/bunga/5.svg" alt="" width="10%">
-            <img class="bunga2" src="./assets/image/bunga/4.svg" alt="" width="10%">
+            <img class="bunga1" src="./assets/image/bunga/5.svg" alt="" width="10%" data-aos="fade-up" data-aos-duration=3000>
+            <img class="bunga2" src="./assets/image/bunga/4.svg" alt="" width="10%" data-aos="fade-down" data-aos-duration=3000>
       </div>
 
       <main id="content" style="display: none;">
-            <!-- audio -->
             <div class="position-relative">
                   <div class="audio-player">
                         <button id="musicButton" class="btn btn-light rounded-circle music-animate" onclick="playMusic()"><i class="ri-pause-circle-fill" style="color: #B17C20; font-size: 1.5rem;"></i></button>
@@ -82,7 +81,7 @@
                   <img class="bunga_content1" src="./assets/image/bunga2/1.svg" alt="bunga">
             </div>
             <div class="d-flex flex-column justify-content-center position-relative" style="height: 100vh !important;background-color: #FEFEF6;">
-                  <div class="card m-3 p-4 card-shadow font-standard text-center" style="height: 38vh;">
+                  <div class="card m-3 p-4 card-shadow font-standard text-center" style="height: 38vh;" data-aos="zoom-in" data-aos-duration="3000">
                         <p style="font-size: 1rem;">Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
                               untukmu pasangan-pasangan dari
                               jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di
@@ -91,11 +90,11 @@
                         </p>
                         <h4 class="mt-3" style="font-size: 1rem;">AR-RUM Ayat : 21</h4>
                   </div>
-                  <img class="bunga_content7" src="./assets/image/bunga2/8.png" alt=bunga>
-                  <img class="bunga_content2" src="./assets/image/bunga2/2.png" alt="bunga">
+                  <img class="bunga_content7" src="./assets/image/bunga2/8.png" alt="bunga" data-aos="zoom-in-up" data-aos-duration="3000">
+                  <img class="bunga_content2" src="./assets/image/bunga2/2.png" alt="bunga" data-aos="zoom-in" data-aos-duration="3000">
             </div>
             <div class="d-flex flex-column justify-content-center position-relative" style="height: 100vh !important;background-color: #FEFEF6;">
-                  <div class="card m-3 card-shadow p-4 text-end font-standard" style="border-radius: 120px 10px 10px 10px; height: 60vh;">
+                  <div class="card m-3 card-shadow p-4 text-end font-standard" style="border-radius: 120px 10px 10px 10px; height: 60vh;" data-aos="fade-left" data-aos-duration="3000">
                         <h1 style="font-size: 2rem; color: #B17C20;">Bridge and Groom</h1>
                         <di class="mt-5">
                               <h4 style="color: #B17C20; font-size: 1.5rem;">Mayunita Mawardi</h4>
@@ -105,12 +104,12 @@
                               <p style="font-size: 1rem;">Putra dari Alm Bapak Syaroman & Ibu Nur Aina
                               </p>
                   </div>
-                  <img class="bunga_content2" src="./assets/image/bunga2/2.png" alt="bunga">
-                  <img class="bunga_content5" src="./assets/image/bunga2/5.png" alt="bunga">
+                  <img class="bunga_content2" src="./assets/image/bunga2/2.png" alt="bunga" data-aos="zoom-in-up" data-aos-duration="3000">
+                  <img class="bunga_content5" src="./assets/image/bunga2/5.png" alt="bunga" data-aos="fade-right" data-aos-duration="3000">
             </div>
             </div>
             <div class="d-flex flex-column justify-content-center position-relative" style="height: 100vh !important; background-color: #FEFEF6;">
-                  <div class="card m-3 card-shadow p-5 text-center font-standard rounded-top-pill" style="height: 70vh;">
+                  <div class="card m-3 card-shadow p-5 text-center font-standard rounded-top-pill" style="height: 70vh;" data-aos="fade-up" data-aos-duration="3000">
                         <h1 class="fw-bold" style="font-size: 1.5rem; color:#B17C20">Save the Date</h1>
                         <div class="line"></div>
                         <h6 class="mt-3 fw-bold" style="color: #B17C20;">AKAD NIKAH</h6>
@@ -130,16 +129,15 @@
                         <a style="font-size: 1rem; width: 60%;" class="btn btn-outline-secondary mx-auto" href="https://maps.app.goo.gl/U93Ei6nuCu9WWTiaA">Lokasi
                               Pesta</a>
                   </div>
-                  <img class="bunga_content2" src="./assets/image/bunga2/2.png" alt="bunga">
+                  <img class="bunga_content2" src="./assets/image/bunga2/2.png" alt="bunga" data-aos="fade-down" data-aos-duration="3000">
             </div>
             <div id="rsvpContainer" class="d-flex flex-column justify-content-center" style="height: 150vh !important; background-color: #FEFEF6;">
-                  <div class="card m-3 card-shadow p-3 text-start font-standard rounded-4" style="height: 130vh;">
+                  <div class="card m-3 card-shadow p-3 text-start font-standard rounded-4" style="height: 130vh;" data-aos="fade-down" data-aos-duration="1500">
                         <h1 style="color: #B17C20;">RSVP & Wishes</h1>
                         <p>Bagi tamu undangan yang akan hadir di acara pernikahan kami silahkan kirimkan konfirmasi
                               kehadiran dengan mengisi form berikut : </p>
                         <div>
                               <h6 class="fw-bold text-center">jumlah comment</h6>
-                              <!-- mengirim data belum -->
                               <form id="invitationForm" action='processForm.php' method="POST">
                                     <input type="text" placeholder="Nama" name="name" class="form-control rounded-2 mb-3" id="name">
                                     <textarea type="text" placeholder="Ucapan" id="wishes" class="form-control rounded-2 mb-3" name="wishes"></textarea>
@@ -158,7 +156,7 @@
                   </div>
             </div>
             <div class="d-flex flex-column justify-content-start font-standard" style="height: 100vh !important; background-color: #FEFEF6;">
-                  <div class="card m-3 card-shadow p-4  text-start" style="height: 30vh;">
+                  <div class="card m-3 card-shadow p-4  text-start" style="height: 30vh;" data-aos="fade-down" data-aos-duration="3000">
                         <h1 class="fw-bold" style="font-size: 2rem; color: #B17C20;"><u>L</u>ove Gift</h1>
                         <p class="mt-3" style="font-size: 1rem;">Bagi tamu yang akan mengirimkan hadiah kepada kedua
                               mempelai silahkan
@@ -168,7 +166,7 @@
                         <button onclick="openGift()" class="btn btn-outline-secondary w-50">Klik di sini</button>
                   </div>
                   <div id="gift-card" class="card m-3 card-shadow p-4 text-center " style="height: 55vh; display: none;">
-                        <div class="mb-3">
+                        <div class="mb-3" data-aos="fade-left" data-aos-duration="3000">
                               <img class="mb-2" src="./assets/image/mandiri.png" alt="mandiri" width="60%">
                               <div style="font-size: 1rem;">
                                     <p>Mandiri - 108-00-1536952-4</p>
@@ -187,7 +185,7 @@
                   </div>
             </div>
             <div class="d-flex flex-column justify-content-center font-standard position-relative" style="height: 100vh !important; background-color: #FEFEF6;">
-                  <div class="card m-3 card-shadow p-5 text-center rounded-top-pill" style="height: 50vh;">
+                  <div class="card m-3 card-shadow p-5 text-center rounded-top-pill" style="height: 50vh;" data-aos="fade-up" data-aos-duration="3000">
                         <h1 class="fw-bold" style="font-size: 2rem; color: #B17C20;">Putra & Mayu</h1>
                         <div style="font-size: 1rem;">
                               <h5 class="mt-4 fw-bold" style="color:#B17C20">18 FEBRUARY 2024</h5>
@@ -200,13 +198,17 @@
                         </div>
                         <h6>Wassalamualaikum Wr.Wb</h6>
                   </div>
-                  <img class="bunga_content6" src="./assets/image/bunga2/2.png" alt="bunga">
-                  <img class="bunga_content3" src="./assets/image/bunga2/3.png" alt="bunga">
-                  <img class="bunga_content4" src="./assets/image/bunga2/3.png" alt="bunga">
+                  <img class="bunga_content6" src="./assets/image/bunga2/2.png" alt="bunga" data-aos="fade-down" data-aos-duration="1500">
+                  <img class="bunga_content3" src="./assets/image/bunga2/3.png" alt="bunga" data-aos="fade-right" data-aos-duration="3000">
+                  <img class="bunga_content4" src="./assets/image/bunga2/3.png" alt="bunga" data-aos="fade-left" data-aos-duration="3000">
             </div>
 
       </main>
       <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+            AOS.init();
+      </script>
       <script>
             $(document).ready(function() {
                   // Submit form using AJAX

@@ -47,6 +47,7 @@ function bukaUndangan() {
     showContent();
     element.style.transition = "height 0.5s ease";
     element.style.height = "0";
+    AOS.refresh();
     setTimeout(function () {
         element.style.display = "none";
     }, 500);
